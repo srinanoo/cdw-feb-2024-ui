@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+
+@mixin themeColor($bgColor:yellow, $color: red) {
+    background-color: $bgColor;
+    color: $color;
+}
+
+.p1 {
+    @include themeColor;
+    padding: 20px;
+}
+
+.p2 {
+    @include themeColor(green, pink);
+}

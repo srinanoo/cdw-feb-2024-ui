@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <noscript>JS is disabled. Please enable it to work!</noscript>
+    <script>
+        // document.write("My First JS Code.");
+        // window.alert("My First JS Code from Alert Box");
+        // console.log("My First JS Code from console")
+
+        // var i; // declaration
+        // i = 10; // assignment or initialization or definition
+        // i = 20; // reassignment
+
+        // var j = 10; // declaration and assignment
+        // var j = 20; // redeclaration and assignment
+
+        // var i = 10;
+        // console.log(i);
+
+        // var i = 10;
+        // j = 10;
+        // console.log(i);
+        // console.log(j);
+
+        // var i = 10;
+        // console.log(" 1 - " + i);
+        // var i = 20;
+        // console.log(" 2 - " + i);
+
+        // let j = 10;
+        // console.log(" 1 - " + j);
+        // let j = 20;
+        // console.log(" 2 - " + j);
+
+        // var i = 10; // global
+        // console.log(" 1 - " + i);
+        // function testFunc() {
+        //     // i = 20; // local
+        //     // console.log(" 2 - " + i);
+        //     j = "string";
+        //     console.log(" 1J - " + j);
+        // }
+        // testFunc();
+        // // console.log(" 3 - " + i);
+        // var j;
+        // console.log(" 2J - " + j);
+
+        // var a = 10;
+        // var b = 20;
+        // // if(a > b) {
+        // //     console.log("A is greater than B");
+        // // } else {
+        // //     // console.log("A is greater than or equal to B");
+        // //     console.log("A is not greater than B");
+        // // }
+
+        // (a > b)
+        //     ?
+        //     console.log("A is greater than B")
+        //     :
+        //     (
+        //         console.log("A is not greater than B"), 
+        //         console.log("2nd line is executed")
+        //     );
+
+        // console.time();
+        // var i = 0;
+        // while(i < 10) {
+        //     console.log(i);
+        //     i++;
+        // }
+        // console.timeEnd();
+
+        // console.time();
+        // for(i=0; i < 10; i++) {
+        //     console.log(i);
+        // }
+        // console.timeEnd();
+
+        // let i = 10; // number
+        // let j = 234324.51561651 // number
+
+        // let arr = [1, "Dinesh", true];
+        // console.log(arr);
+        // console.log(arr.length);
+        // console.log(arr[0]);
+        // console.log(arr[1]);
+        // console.log(arr[2]);
+
+        // arr[3] = "New Element";
+        // console.log(arr[3]);
+        // console.log(arr);
+
+        // arr[7] = "123";
+        // console.log(arr[7]);
+        // console.log(arr);
+
+        // arr[5] = 22222;
+        // console.log(arr[5]);
+
+
+        // arr[0] = "STRING";
+        // console.log(arr);
+
+        // let arr = [];
+        // arr[0] = 1;
+        // arr[1] = "Dinesh";
+        // arr[2] = true;
+        // console.log(arr);
+
+        // pop, push, shift, unshift, splice
+        // let arr = [1, 2, 3, 4, 5, 6, 7];
+        // console.log(arr);
+        // let removed = arr.pop();
+        // console.log(arr);
+        // console.log(removed);
+
+        // let removed = arr.shift();
+        // console.log(arr);
+        // console.log(removed);
+
+        // arr.push("a", "b", 111, 222, 333);
+        // console.log(arr);
+
+        // arr.unshift("a", "b", 111, 222, 333);
+        // console.log(arr);
+
+        // arr.splice(1);
+
+        // let userDetails = [1, "Dinesh", true, 123, "something", "01/01/2024"];
+        // console.log("for...loop....");
+        // console.time();
+        // for(let i = 0; i < userDetails.length; i++) {
+        //     // console.log(userDetails[i]);
+        // }
+        // console.timeEnd();
+
+        // console.time();
+        // console.log("for...in loop....");
+        // for(let temp in userDetails) {
+        //     // console.log(userDetails[temp]);
+        // }
+        // console.timeEnd();
+
+        // console.time();
+        // console.log("for...of loop....");
+        // for(let temp of userDetails) {
+        //     // console.log(temp);
+        // }
+        // console.timeEnd();
+
+
+        // let userDetails = [1, true, "Dinesh", "01/01/2024"];
+        // console.log(userDetails[0]);
+        // console.log(userDetails[1]);
+        // console.log(userDetails[2]);
+        // console.log(userDetails[3]);
+
+        let userDetailsObj = {
+            "id": 1,
+            "name": "Dinesh",
+            "dateJoined": "01/01/2024",
+            "subjects": ["HTML", "CSS", "JS"],
+            "marks": {
+                "html": 20,
+                "css": 20,
+                "js": 20,
+            },
+            "active": true,
+            getDetails: function() {
+                return "";
+            }
+        }
+        userDetailsObj.getDetails();
+        // console.log(userDetailsObj.id);
+        // console.log(userDetailsObj.name);
+        // console.log(userDetailsObj.active);
+        // console.log(userDetailsObj.dateJoined);
+
+        // userDetailsObj.address = "Address 1";
+        // console.log(userDetailsObj.address);
+        // console.log(userDetailsObj);
+
+        // userDetailsObj.name = "New Name";
+        // console.log(userDetailsObj);
+
+        // console.log(userDetailsObj["active"]);
+        // let temp = "active";
+        // console.log(userDetailsObj[temp]);
+        // console.log(userDetailsObj.temp);
+        
+        // for(let temp in userDetailsObj) {
+        //     console.log(userDetailsObj[temp]);
+        // }
+
+        // let userDetailsObj = [
+        //     {
+        //         id: 1,
+        //         name: "Name 1",
+        //         active: true,
+        //         subject: ["HTML", "CSS", "JS"]
+        //     },
+        //     {
+        //         id: 2,
+        //         name: "Name 2",
+        //         active: false
+        //     },
+        //     {
+        //         id: 3,
+        //         name: "Name 3",
+        //         active: true
+        //     },
+        //     {
+        //         id: 4,
+        //         name: "Name 4",
+        //         active: true
+        //     },
+        //     {
+        //         id: 5,
+        //         name: "Name 5",
+        //         active: true
+        //     },
+        // ]
+        // console.log(userDetailsObj[0]);
+
+        // Functions
+            // Regular Function
+            // function testFunc() { // function definition
+            //     console.log("Function called..");
+            // }
+            // testFunc(); /// function invoking line.
+
+            // function testFunc1() { // function
+            //     return 10 + 20;
+            // }
+            // let result = testFunc1(); /// function
+            // console.log(result);
+
+            
+            // let result1 = testFunc2(10);
+            // console.log(result1);
+            // function testFunc2(param1, param2) { // function
+            //     return param1 + param2;
+            // }
+
+            // // Anonymous Function
+            // let testFunc3 = function(param1, param2) { // function
+            //     return param1 + param2;
+            // }
+            // testFunc3(10, 10);
+
+            // // Arrow Function
+            // let testFunc4 = (param1, param2) => { // function
+            //     return param1 + param2;
+            // }
+            // testFunc4(10, 10);
+
+            // let testFunc5 = (param1, param2) => param1 + param2;
+            // testFunc4(10, 10);
+
+            // let testFunc6 = () => 10 + 20;
+            // testFunc6();
+
+            // let testFunc7 = param => param + 20;
+            // testFunc7(10);
+
+
+            // IIFE (Immediately Invoked Function Expression)
+            // (function() {
+            //     console.log("TEST");
+            // })();
+        
+        // let arr = [1, "Dinesh", true];
+        // function processArray(v) {
+        //     console.log(v);
+        // }
+        // arr.forEach(processArray);
+
+
+        // arr.forEach(v => console.log(v));
+
+        // let arr = [1, 2, 3, 4, 5];
+        // let results = arr.map(v => Math.sqrt(v));
+        // console.log(arr);
+        // console.log(results);
+
+        // let ageOfPeople = [2, 5, 85, 65, 20, 14, 44, 33, 25, 15, 18];
+        // let result = [];
+        // for(let i= 0; i < ageOfPeople.length; i++) {
+        //     if(ageOfPeople[i] >= 18) {
+        //         result.push(ageOfPeople[i]);
+        //     }
+        // }
+        // console.log(result);
+        // console.log(result.length);
+        // (result.length !== ageOfPeople.length)
+        //     ? console.log("Not all people were greater than 18 yrs")
+        //     : console.log("All people were greater than 18 yrs");
+
+        // // Array filter
+        // let results = ageOfPeople.filter(v => v<18);
+        // console.log(results);
+        // console.log(results.length);
+
+        // let resultBool = ageOfPeople.every(v => v>=18);
+        // console.log(resultBool);
+
+        // let resultBool1 = ageOfPeople.some(v => v>=18);
+        // console.log(resultBool1);
+
+        // let marks = [50, 40, 80, 90, 52, 45];
+        // let sum = 0;
+        // for(let i = 0; i < marks.length; i++) {
+        //     sum += marks[i];
+        // }
+        // console.log(sum/marks.length);
+
+        // let sum1 = marks.reduce((pv, v) => pv + v, 100);
+        // console.log(sum1);
+    </script>
+    
+</body>
+</html>

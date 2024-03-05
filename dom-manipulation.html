@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        img {
+            max-width: 100%;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .row .col {
+            width: 33.3333333%;
+            padding: 5px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .row .col div:first-child {
+            width: 30%;
+        }
+        .row .col div:last-child {
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="container"></section>
+
+    <script type="module">
+        import data from "./usersDetails.json" assert { type: "json"};
+
+        console.log(data);
+
+        let usersObj = [
+            {
+                "id": 1,
+                "name": "Name 1",
+                "active": true,
+                "img": "images/background.jpeg"
+            },
+            {
+                "id": 2,
+                "name": "Name 2",
+                "active": false,
+                "img": "images/background.jpeg"
+            },
+            {
+                "id": 3,
+                "name": "Name 3",
+                "active": true,
+                "img": "images/background.jpeg"
+            },
+            {
+                "id": 4,
+                "name": "Name 4",
+                "active": true,
+                "img": "images/background.jpeg"
+            },
+            {
+                "id": 5,
+                "name": "Name 5",
+                "active": true,
+                "img": "images/background.jpeg"
+            },
+            {
+                "id": 6,
+                "name": "Name 6",
+                "active": true,
+                "img": "images/background.jpeg"
+            },
+            {
+                "id": 7,
+                "name": "Name 7",
+                "active": true,
+                "img": "images/background.jpeg"
+            }
+        ];
+
+        let template = '<div class="row"><div class="col"><div>IMG</div><div><p>Id: 1</p><p>Name: 1</p><p>Active: 1</p></div></div></div>';
+
+        let output = "";
+        output += '<div class="row">';
+
+        usersObj.forEach((v) => {
+            output += `<div class="col"><div><img src="${v.img}" alt="${v.name}"></div><div><p>Id: ${v.id}</p><p>Name: ${v.name}</p><p>Active: ${v.active}</p></div></div>`
+        });
+
+        output += '</div>';
+        // console.log(output);
+
+        document.querySelector(".container").innerHTML = output;
+    </script>
+    
+</body>
+</html>

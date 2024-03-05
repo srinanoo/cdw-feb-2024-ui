@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+            background-color: red;
+
+            & ul {
+                list-style: none;
+                padding: 0;
+
+                & li {
+                    display: inline-block;
+
+                    & > a {
+                        color: blue;
+                        text-decoration: none;
+                        padding: 5px 10px;
+
+                        &:hover {
+                            color: yellow;
+                        }
+                    }
+                }
+            }
+        } 
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="">Menu 1</a>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        const x = 10;
+        function test1() {
+            const x = 20;
+            function test1child() {
+                console.log("x 0: " + x);
+            }
+            test1child();
+            console.log("x 1: " + x);
+        }
+        test1();
+        console.log("x 2: " + x);
+    </script>
+    
+</body>
+</html>

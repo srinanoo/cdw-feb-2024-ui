@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .colorRed {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <p><strong>Paragraph</strong> 1</p>
+    <div class="div1">Div 1 Container</div>
+    <h3 id="h3">Heading 3</h3>
+    <div id="div2"></div>
+
+    <!-- <script src="js/jquery-3.7.1.min.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        // $.noConflict();
+        jQuery(document).ready(function($) {
+            // console.log("jQuery is ready");
+
+            // console.log($("p").html());
+            // console.log($("p").text());
+
+            // $("#div2").html("This is a <strong>test</strong> message");
+
+            // $("#div2").addClass("colorRed");
+            // $("#h3").css({"background-color": "yellow", "color": "green"});
+
+            // $(".div1").click(function() {
+            //     $(".div1").toggleClass("colorRed");
+            // });
+
+            $.ajax({
+                url: "https://catfact.ninja/fact",
+                complete: function(data) {
+                    // console.log(data);
+                    if(data) {
+                        let res = JSON.parse(data.responseText);
+                        console.log(res.fact);
+                    }
+                },
+                error: function(err) {
+                    console.log("Error: " + err.message);
+                }
+            })
+        });
+    </script>
+    
+</body>
+</html>

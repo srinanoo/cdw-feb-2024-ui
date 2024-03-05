@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <form onsubmit="return process();">
+        <input type="text" name="txtUsername" placeholder="Username:"><br>
+        <input type="password" name="paPassword" placeholder="Password:"><br>
+
+        <input type="submit">
+    </form> -->
+
+    <form name="LoginForm">
+        <input type="text" id="txtUsername" class="clsInput" name="txtUsername" placeholder="Username:"><br>
+        <input type="password" id="paPassword" class="clsInput" name="paPassword" placeholder="Password:"><br>
+
+        <input type="button" value="Click" onclick="process();">
+    </form>
+
+    <script>
+        function process() {
+            console.log("Processing...");
+
+            // Old
+                // document.<Name of Form>.<Name of the Element>.value
+                let username1 = document.LoginForm.txtUsername.value;
+                let password1 = document.LoginForm.paPassword.value;
+                console.log("Form Name Method:", username1, password1);
+
+                // document.forms[index].<Name of the Element.value>
+                let username2 = document.forms[0].txtUsername.value;
+                let password2 = document.forms[0].paPassword.value;
+                console.log("Forms Collection: ", username2, password2);
+
+            // Traditional
+                // document.getElementById(<Id Attribute Name>).value
+                let username3 = document.getElementById("txtUsername").value;
+                let password3 = document.getElementById("paPassword").value;
+                console.log("getElementById: ", username3, password3);
+
+                // document.getElementsByClassName(<Class Attribute Name>)[index].value
+                let username4 = document.getElementsByClassName("clsInput")[0].value;
+                let password4 = document.getElementsByClassName("clsInput")[1].value;
+                console.log("getElementsByClassName: ", username4, password4);
+
+                // document.getElementsByName(<Name Attribute>)[index].value
+                let username5 = document.getElementsByName("txtUsername")[0].value;
+                let password5 = document.getElementsByName("paPassword")[0].value;
+                console.log("getElementsByName: ", username5, password5);
+
+                // document.getElementsByTagName(<Name of the HTML TAG>)[index].value
+                let username6 = document.getElementsByTagName("input")[0].value;
+                let password6 = document.getElementsByTagName("input")[1].value;
+                console.log("getElementsByTagName: ", username6, password6);
+
+            // Modern
+                // document.querySelector(<CSS Selector>).value
+                let username7 = document.querySelector("#txtUsername").value;
+                let password7 = document.querySelector("#paPassword").value;
+                console.log("querySelector: ", username7, password7);
+
+                // document.querySelectorAll(<CSS Selector>)[index].value
+                let username8 = document.querySelectorAll(".clsInput")[0].value;
+                let password8 = document.querySelectorAll(".clsInput")[1].value;
+                console.log("querySelectorAll: ", username8, password8);
+
+            // return false;
+        }
+    </script>
+    
+</body>
+</html>

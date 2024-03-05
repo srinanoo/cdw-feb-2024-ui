@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .colorRed {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <h1>Heading 1</h1>
+
+    <div id="div1">
+        Div 1 Container
+    </div>
+
+    <div id="div2">
+        Div 2 <strong>Container</strong>
+    </div>
+
+    <div id="div3"></div>
+
+    <div id="div4"></div>
+
+    <button onclick="process();">Click</button> -->
+
+    <!-- <div id="div1">
+        <h2 id="h2">Heading 2</h2>
+        <p id="p1">Paragraph 1</p>
+        <div id="div2">Div 2</div>
+        <h3 id="h3">Heading 3</h3>
+        <img src="images/background.jpeg" width="100" id="img1">
+    </div>
+    <br>
+    <p><button id="btnClick">Click</button></p> -->
+
+    <div id="shapes">
+        <div id="square">Square</div>
+        <div id="triangle">Triangle</div>
+        <div id="circle">Circle</div>
+    </div>
+    <div id="chosenShape"></div>
+
+    <div id="details"></div>
+    <button id="btnDetails">Show Details</button>
+
+    <p><a href="https://ndtv.com" onclick="redirectURL(event);">Click</a></p>
+
+    <script>
+        function redirectURL(e) {
+            e.preventDefault();
+            console.log("Redirect is not going to happen automatically");
+            console.log(e.target.href);
+        }
+
+        document.querySelector("#btnDetails").addEventListener("click", (e) => {
+            let data = localStorage.getItem("userDetails");
+            if(data) {
+                data = JSON.parse(data);
+                document.querySelector("#details").innerHTML = `Id: ${data.id}, Name: ${data.name}, Active: ${data.active}`;
+            }
+        });
+
+        document.querySelector("#shapes").addEventListener("click", (e) => {
+            console.log(e.target.id);
+            // localStorage.setItem("shapes", e.target.id);
+
+            // document.querySelector("#chosenShape").innerHTML = localStorage.getItem("shapes");
+
+            let obj = {
+                id: 1,
+                name: "Dinesh",
+                active: true
+            }
+            localStorage.setItem("userDetails", JSON.stringify(obj))
+        });
+
+        // document.querySelector("#chosenShape").innerHTML = localStorage.getItem("shapes");
+
+        // document.querySelector("#square").addEventListener("click", (e) => {
+        //     // console.log("Square clicked");
+        //     console.log(e);
+        // });
+        // document.querySelector("#triangle").addEventListener("click", (e) => {
+        //     console.log("Triangle clicked");
+        // });
+        // document.querySelector("#circle").addEventListener("click", (e) => {
+        //     console.log("Circle clicked");
+        // });
+
+        // document.querySelector("#btnClick").addEventListener("click", () => {
+        //     // console.log("Processing");
+        //     let div1 = document.querySelector("#div1");
+        //     let h2 = document.querySelector("#h2");
+        //     let p1 = document.querySelector("#p1");
+        //     let div2 = document.querySelector("#div2");
+        //     let h3 = document.querySelector("#h3");
+
+        //     let p2 = document.createElement("p");
+        //     p2.innerHTML = "This is a new Paragraph";
+        //     p2.setAttribute("class", "colorRed");
+        //     p2.style.backgroundColor = "Blue";
+        //     p2.addEventListener("click", () => {
+        //         console.log("New Paragraph is clicked");
+        //     });
+
+        //     // div1.append(p2);
+        //     // div1.prepend(p2);
+        //     div1.insertBefore(p2, div2);
+
+        //     // div2.style.display = "none";
+
+        //     document.querySelector("#img1").src = "images/bullet.png";
+        // });
+
+        // function process() {
+        //     let div1 = document.getElementById("div1").innerText;
+        //     console.log(div1);
+
+        //     let div2 = document.getElementById("div2").innerText;
+        //     console.log(div2);
+
+        //     let div21 = document.getElementById("div2").innerHTML;
+        //     console.log(div21);
+
+        //     let div31 = document.querySelector("#div3");
+        //     div31.innerText = div2;
+        //     div31.setAttribute("class", "colorRed");
+        //     div31.setAttribute("data-temp", "Dinesh");
+
+        //     let div41 = document.querySelector("#div4");
+        //     div41.innerText = div21;
+        //     div41.style.color = "red";
+        //     // div41.style.backgroundColor = "green";
+        //     div41.setAttribute("style", "background-color: green");
+
+        //     let customAttr = div31.getAttribute("data-temp");
+        //     console.log(customAttr);
+
+        //     div31.removeAttribute("class");
+        // }
+    </script>
+    
+</body>
+</html>

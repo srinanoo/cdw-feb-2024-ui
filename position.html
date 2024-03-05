@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        img {
+            max-width: 100%;
+        }
+        body {
+            margin: 0;
+        }
+        .div1 {
+            background-color: red;
+        }
+        .div2 {
+            background-color: green;
+        }
+        .div3 {
+            background-color: purple;
+        }
+        .div4 {
+            background-color: blue;
+        }
+        .div1, .div2, .div3, .div4 {
+            width: 100px;
+            height: 50px;
+            position: absolute;
+        }
+
+        nav {
+            background-color: red;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li, nav a, nav div {
+            display: inline-block;
+            background-color: yellow;
+            padding: 5px 10px;
+        }
+        nav a {
+            text-decoration: none;
+        }
+        .submenu {
+            position: absolute;
+            margin-left: -10px;
+            display: none;
+        }
+        .submenu div {
+            display: block;
+        }
+        li:hover .submenu, .menu2 a:hover .submenu {
+            display: block;
+        }
+
+        .box {
+            width: 200px;
+            border: solid;
+            height: 134px;
+        }
+
+        .box p {
+            position: absolute;
+            width: 198px;
+            z-index: -1;
+        }
+        .box img {
+            position: absolute;
+            width: 198px;
+        }
+        .box:hover {
+            cursor: pointer;
+        }
+        .box:hover p {
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <div class="div1">Div 1 Container</div>
+    <div class="div2">Div 2 Container</div>
+    <div class="div3">Div 3 Container</div>
+    <div class="div4">Div 4 Container</div> -->
+
+    <div class="box">
+        <img src="images/background.jpeg">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <!-- <div>
+        <img src="images/close-1.png" width="15">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+    </div> -->
+
+    <!-- <nav>
+        <ul>
+            <li>Menu 1</li>
+            <li>Menu 2</li>
+            <li>Menu 3
+                <div class="submenu">
+                    <div>Sub Menu 1</div>
+                    <div>Sub Menu 1</div>
+                    <div>Sub Menu 1</div>
+                    <div>Sub Menu 1</div>
+                    <div>Sub Menu 1</div>
+                </div>
+            </li>
+            <li>Menu 4</li>
+            <li>Menu 5</li>
+        </ul>
+    </nav>
+
+    <nav class="menu2">
+        <a href="">Menu 1</a>
+        <a href="">Menu 2</a>
+        <a href="">Menu 3</a>
+        <div class="submenu">
+            <div>Sub Menu 1</div>
+            <div>Sub Menu 1</div>
+            <div>Sub Menu 1</div>
+            <div>Sub Menu 1</div>
+            <div>Sub Menu 1</div>
+        </div>
+        <a href="">Menu 4</a>
+        <a href="">Menu 5</a>
+    </nav>
+
+    <br>
+    <nav>
+        <div>Menu 1</div>
+        <div>Menu 2</div>
+        <div>Menu 3</div>
+        <div>Menu 4</div>
+        <div>Menu 5</div>
+    </nav> -->
+    
+</body>
+</html>

@@ -1,0 +1,135 @@
+Naming Conventions
+    - capital letter start
+    - action words for methods
+    - lowercase variable
+    - all caps for constants
+
+    - Cases
+        - Pascal / Upper camelcase
+            DineshPradeep
+        - Snake
+            Dinesh_Pradeep
+        - Dash
+            Dinesh-Pradeep
+        - uppercase
+        - lowercase
+        - Camel / Lower camelcase
+            dineshPradeep
+
+    - Folders / Files
+        - Meaningful Names
+        - Organising your Files/Folders
+            Website
+                - .html
+                - .css
+                - .js
+                - images
+
+                Dinesh-Website
+                    index.html
+                    about-us.html
+                    about_us.html
+                    aboutUs.html
+                    aboutus.html
+                    contact.html
+                    blog.html
+                    /assets
+                        /css
+                            *.css
+                        /js
+                            *.js
+                        /images
+                            *.jpg
+    Code Indentation
+
+
+Rules and Regulations
+Design Patterns
+
+
+Types of Languages?
+    - Markup
+        Placeholder
+            - HTML
+            - XML
+    - Scripting
+        Client
+            JavaScript
+            TypeScript
+        Server
+            PHP
+            NodeJS
+            Django
+            JSP
+    - Programming
+
+HTML
+    Tags aka Containers aka Elements
+
+        Syntax:
+            <...>
+                ....
+            </...>
+
+        Types of Tags:
+            Paired
+                <TAGNAME>
+                    ... content.. container...
+                </TAGNAME>
+            Unpaied aka Self Closing
+                <TAGNAME>
+                    XML
+                        <TAGNAME />
+
+    Classification
+        - Block
+            which occupies the entire row of the parent container irrespective of the content...
+        - Inline
+            which occupies the size of the content...
+
+    Attributes
+        - Paired
+        - Unpaired or Self Closing
+
+        Classification
+            - Core
+                id
+                class
+                style
+                title
+            - Generic
+            - Custom
+                data-<whatever name>
+
+Tables vs Tabular Column
+
+
+CSS Colors
+    - rgb
+        red + green + blue
+            numbered value
+                0-255 (256)
+                    256 + 256 + 256
+                        color: rgb(0, 0, 0) = black
+                        color: rgb(255, 255, 255) = white
+            percentage
+                0-100%
+
+    - rgba
+        red + green + blue + alpha
+            color: rgba(255, 0, 0, 0.5)
+
+
+< = max-width
+> = min-width
+
+@media only screen and (max-width: 576px) {
+
+}
+
+@media and (max-width: 576px) {
+
+}
+
+@media (max-width: 576px) {
+}

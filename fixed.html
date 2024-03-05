@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        img {
+            max-width: 100%;
+        }
+        .left {
+            width: 25%;
+            background-color: yellow;
+            position: fixed;
+        }
+        .right {
+            width: 75%;
+            margin-left: 25%;
+            background-color: aqua;
+        }
+        .sticky {
+            background-color: green;
+            position: sticky;
+            top: 0;
+        }
+
+        /* .red {
+            color: red;
+        }
+        .bgblue {
+            background-color: blue;
+        }
+        .redblue {
+            color: red;
+            background-color: blue;
+        } */
+        [class="red"] {
+            color: blue;
+            background-color: green;
+        }
+
+        .row {
+            background-color: red;
+        }
+
+        .div1, .div2, .div3 {
+            float: left;
+            width: 33.33333333%;
+            padding: 5px;
+        }
+
+        .div1 div {
+            background-color: green;
+        }
+        .div2 div {
+            background-color: yellow;
+        }
+        .div3 div {
+            background-color: aqua;
+        }
+        .clearfix {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="row">
+        <div class="div1">
+            <div>First Container</div>
+        </div>
+        <div class="div2">
+            <div>First Container</div>
+        </div>
+        <div class="div3">
+            <div>First Container</div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+
+    <!-- <div class="red">
+        Div Container
+    </div>
+    <div class="red bgblue">
+        Div Container
+    </div>
+    <div class="bgblue">
+        Div Container
+    </div>
+
+    <img src="images/arrow2.png" width="25">
+    
+    <div>
+        <div class="left">
+            <img src="images/background.jpeg">
+
+            <nav>
+                <ul>
+                    <li>Menu 1</li>
+                    <li>Menu 1</li>
+                    <li>Menu 1</li>
+                    <li>Menu 1</li>
+                    <li>Menu 1</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="right">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p class="sticky">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nobis culpa iste molestias nemo nisi dolore eveniet quas minus temporibus dolores blanditiis voluptas quod libero dignissimos, deserunt, est deleniti. Corporis!</p>
+        </div>
+    </div> -->
+
+</body>
+</html>

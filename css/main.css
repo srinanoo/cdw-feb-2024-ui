@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.p1 {
+  background-color: yellow;
+  color: red;
+  padding: 20px;
+}
+
+.p2 {
+  background-color: green;
+  color: pink;
+}
+
+/*# sourceMappingURL=main.css.map */

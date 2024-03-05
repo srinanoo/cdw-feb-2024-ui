@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            max-width: 100%;
+        }
+
+        .row1 {
+            background-color: red;
+        }
+        .row1 div {
+            float: left;
+            width: 16.6666666%;
+        }
+
+        .row2 {
+            background-color: yellow;
+        }
+        .row2 div {
+            float: left;
+            width: 25%;
+        }
+
+        .row3 {
+            background-color: blue;
+        }
+        .row3 div {
+            float: left;
+            width: 33.33333333%;
+        }
+
+        .row4 {
+            background-color: green;
+        }
+        .row4 div {
+            float: left;
+            width: 50%;
+        }
+        .clearfix {
+            clear: both;
+        }
+
+        /* @media only screen and (max-width: 768px) {
+            .row1 div {
+                width: 33.3333333%;
+            }
+        } */
+
+        /* @media only screen and (max-width: 576px) {
+            .row1 div, .row2 div, .row3 div {
+                width: 50%;
+            }
+        } */
+
+        @media only screen and (min-width: 576px) {
+            .row1 div, .row2 div, .row3 div {
+                width: 50%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="row1">
+        <div>
+            <img src="images/background.jpeg">
+            <p>Paragrah 1</p>
+        </div>
+        <div>
+            <img src="images/background.jpeg">
+            <p>Paragrah 1</p>
+        </div>
+        <div>
+            <img src="images/background.jpeg">
+            <p>Paragrah 1</p>
+        </div>
+        <div>
+            <img src="images/background.jpeg">
+            <p>Paragrah 1</p>
+        </div>
+        <div>
+            <img src="images/background.jpeg">
+            <p>Paragrah 1</p>
+        </div>
+        <div>
+            <img src="images/background.jpeg">
+            <p>Paragrah 1</p>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="row2">
+        <div>
+            <img src="images/background.jpeg">
+            <p>Paragrah 1</p>
+        </div>
+        <div>
+            <img src="images/background.jpeg">
+            <p>Paragrah 1</p>
+        </div>
+        <div>
+            <img src="images/background.jpeg">
+            <p>Paragrah 1</p>
+        </div>
+        <div>
+            <img src="images/background.jpeg">
+            <p>Paragrah 1</p>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="row3">
+        <div>
+            <img src="images/background.jpeg">
+            <p>Paragrah 1</p>
+        </div>
+        <div>
+            <img src="images/background.jpeg">
+            <p>Paragrah 1</p>
+        </div>
+        <div>
+            <img src="images/background.jpeg">
+            <p>Paragrah 1</p>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="row4">
+        <div>
+            <img src="images/background.jpeg">
+            <p>Paragrah 1</p>
+        </div>
+        <div>
+            <img src="images/background.jpeg">
+            <p>Paragrah 1</p>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="row5">
+        <div>
+            <img src="images/background.jpeg">
+            <p>Paragrah 1</p>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    
+</body>
+</html>

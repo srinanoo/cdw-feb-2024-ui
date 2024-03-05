@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:-webkit-autofill {
+    transition: background-color 5000ms, color 5000ms;
+}
+    .div {
+        background-color: red;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+    }
+    .div img {
+        height: 100%;
+        width: 100%;
+        background-color: blue;
+    }
+    /* .div img::before {
+        content: '';
+     width: 100%;
+     height: calc(100% + 10px);
+     background-color: #ccc;
+     border-radius: 10px;
+     position: absolute;
+     top: 50%;
+     left: -2px;
+     transform: translateY(-50%);
+
+    } */
+    </style>
+</head>
+<body>
+
+    <div class="div">
+        <img>
+    </div>
+
+    <br><br>
+
+    <input type="text" style="background:#000; color: #fff;" name="name" id="">
+
+    <div id="time"></div>
+    <button id="btnStart">Start</button>
+    <button id="btnStop">Stop</button>
+
+    <script>
+        console.log(location);
+
+        document.querySelector("#btnStart").addEventListener("click", () => {
+            location.replace("https://amazon.in");
+        });
+
+        // let timer;
+        // document.querySelector("#btnStart").addEventListener("click", () => {
+
+        //     // timer = setInterval(() => {
+        //     //     let dt = new Date();
+        //     //     document.querySelector("#time").innerHTML = dt.toLocaleTimeString();
+        //     // }, 1000)
+
+        //     setTimeout(() => {
+        //         let dt = new Date();
+        //         document.querySelector("#time").innerHTML = dt.toLocaleTimeString();
+        //     }, 5000);
+
+            
+        // });
+
+        // document.querySelector("#btnStop").addEventListener("click", () => {
+        //     clearInterval(timer);
+        // });
+
+        // alert("This is an alert");
+        // let conf = confirm("Are you sure you want to delete?");
+        // console.log(conf);
+        // let data = prompt("Enter your Name:");
+        // console.log(data);
+    </script>
+    
+</body>
+</html>

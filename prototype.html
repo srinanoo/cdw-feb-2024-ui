@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function testFunc(name, id) {
+            return `Name is: ${name}, Id is: ${id}`;
+        }
+        let result = testFunc("Dinesh", 1);
+        console.log("result:", result);
+
+        let result1 = testFunc("Charan", 2);
+        console.log("result1:", result1);
+
+        function testFuncObj(name, id) {
+            this.name = name;
+            this.id = id;
+            // this.batch = "2024";
+            // return this;
+        }
+        testFuncObj.prototype.batch = "2024";
+        testFuncObj.prototype.getDetails = function() {
+            return `Name is: ${this.name}, Id is ${this.id}, Batch is: ${this.batch}`;
+        }
+        let resultObj = new testFuncObj("Dinesh", 1);
+        // console.log("resultObj: ", resultObj.name, resultObj.id, resultObj.batch);
+        console.log(resultObj.getDetails());
+
+        let resultObj1 = new testFuncObj("Charan", 2);
+        // console.log("resultObj1: ", resultObj1.name, resultObj1.id, resultObj1.batch);
+        console.log(resultObj1.getDetails());
+
+        console.log(resultObj1.__proto__)
+    </script>
+    
+</body>
+</html>

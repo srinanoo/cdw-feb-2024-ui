@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <textarea id="taMessage"></textarea><br>
+    <div id="count"></div> -->
+
+    <!-- <div id="div1" style="width: 100px; height: 100px; border: solid;">
+        Sample Text
+    </div>
+    <div id="coord"></div> -->
+
+    <!-- Cities:<br>
+    <select id="cities">
+        <option value="1">Chennai</option>
+        <option value="2">Mumbai</option>
+        <option value="3">Kolkata</option>
+        <option value="4">Hyderabad</option>
+        <option value="5">Bengaluru</option>
+        <option value="6">Cochin</option>
+    </select>
+
+    <br><br>
+    States:<br>
+    <select id="states">
+        <option value="1">Tamilnadu</option>
+        <option value="2">Maharashtra</option>
+        <option value="3">West Bengal</option>
+        <option value="4">Telegana</option>
+        <option value="5">Karnataka</option>
+        <option value="6">Kerala</option>
+    </select>
+
+    <br><br>
+    <input type="text" id="txtUsername"> -->
+
+    <!-- <a href="">Click</a>
+    <div>Div Container</div>
+    <h3>Heading 3</h3>
+    <input type="text" name="" id="">
+    <input type="text" name="" id="">
+    <input type="text" name="" id="txt1">
+    <input type="text" name="" id="">
+    <input type="text" name="" id="">
+    <input type="text" name="" id=""> -->
+
+    Subjects:<br>
+    <input type="checkbox" name="chkSubjects" value="HTML"> HTML<br>
+    <input type="checkbox" name="chkSubjects" value="CSS"> CSS<br>
+    <input type="checkbox" name="chkSubjects" value="JS"> JS<br>
+    <input type="checkbox" name="chkSubjects" value="NodeJs"> NodeJS<br>
+    <input type="checkbox" name="chkSubjects" value="ReactJS"> ReactJs<br>
+    <button id="btnClick">Click</button>
+
+    <script>
+        document.querySelector("#btnClick").addEventListener("click", () => {
+            let subjects = document.querySelectorAll("[name=chkSubjects]");
+            subjects.forEach(v => {
+                // console.log(v.checked);
+                if(v.checked) {
+                    console.log(v.value);
+                }
+            });
+        });
+        // document.querySelector("#taMessage").addEventListener("keyup", () => {
+        //     let counter = document.querySelector("#taMessage").value.length;
+        //     // console.log(counter);
+        //     document.querySelector("#count").innerHTML = counter;
+        // });
+
+        // document.querySelector("#div1").addEventListener("mouseenter", () => {
+        //     document.querySelector("#div1").style.backgroundColor = "red";
+        //     document.querySelector("#div1").style.color = "yellow";
+        // });
+
+        // document.querySelector("#div1").addEventListener("mouseleave", () => {
+        //     document.querySelector("#div1").style.backgroundColor = "white";
+        //     document.querySelector("#div1").style.color = "black";
+        // });
+
+        // document.querySelector("#div1").addEventListener("mousemove", (e) => {
+        //     let x = e.clientX;
+        //     let y = e.clientY;
+        //     document.querySelector("#coord").innerHTML = `X : ${x}, Y : ${y}`;
+        // });
+
+        // document.querySelector("#cities").addEventListener("change", () => {
+        //     document.querySelector("#states").value = document.querySelector("#cities").value;
+        // });
+
+        // document.querySelector("#txtUsername").addEventListener("change", () => {
+        //     console.log(document.querySelector("#txtUsername").value)
+        // });
+
+        // document.querySelector("#txt1").addEventListener("focus", () => {
+        //     let txt1 = document.querySelector("#txt1");
+        //     if(txt1.value === "") {
+        //         txt1.style.backgroundColor = "red";
+        //         txt1.style.color = "white";
+        //         txt1.focus();
+        //     } else {
+        //         txt1.style.backgroundColor = "green";
+        //         txt1.style.color = "white";
+        //     }
+            
+        // });
+
+        // document.querySelector("#txt1").addEventListener("blur", () => {
+        //     let txt1 = document.querySelector("#txt1");
+        //     if(txt1.value === "") {
+        //         txt1.style.backgroundColor = "red";
+        //         txt1.style.color = "white";
+        //         txt1.focus();
+        //     } else {
+        //         txt1.style.backgroundColor = "green";
+        //         txt1.style.color = "white";
+        //     }
+        // });
+    </script>
+    
+</body>
+</html>
