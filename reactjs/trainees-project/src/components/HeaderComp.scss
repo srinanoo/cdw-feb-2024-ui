@@ -1,0 +1,33 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    & div:first-child {
+        width: 20%;
+    }
+
+    & div:last-child {
+        width: 80%;
+    }
+
+    & .menus ul {
+        list-style: none;
+        padding: 0;
+        text-align: right;
+
+        & li {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: yellow;
+
+            & a {
+                text-decoration: none;
+            }
+
+            &:hover {
+                background-color: red;
+            }
+        }
+    }
+}

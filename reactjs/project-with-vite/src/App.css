@@ -1,4 +1,60 @@
-.div1 {
-  background-color: red;
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+.row1 {
+  background-color: rgba(128, 128, 128, 0.425);
+}
+.row1section1, .row1section2, .row2section1, .row3section1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row1section2 {
+  justify-content: center;
+}
+.row3 {
+  background-color: gray;
+  padding: 10px;
+}
+.row1section2 div {
+  background-color: gray;
   color: white;
+  padding: 5px 10px;
+}
+.row1section1 > div, .row3section1 > div {
+  width: 50%;
+}
+.row2section1 > div {
+  width: 33.3333333%;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+.row3section1 > div:first-child {
+  background-color: white;
+}
+.row3section1 > div:last-child {
+  background-color: rgb(69, 68, 68);
+  color: white;
+}
+.row1section1 > div:last-child {
+  text-align: right;
+}
+.logo {
+  width: 25%;
+  border-radius: 50%;
+}
+.row2 h3, .row3 h3 {
+  text-align: center;
+}
+.row4 {
+  background-color: gainsboro;
+  text-align: center;
+  padding: 10px;
+}
+
+.active {
+  color: red;
+  text-decoration: none;
 }

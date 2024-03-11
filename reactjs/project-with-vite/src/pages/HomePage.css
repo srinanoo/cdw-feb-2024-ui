@@ -1,0 +1,27 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.row .skSection {
+    width: 33.3333333%;
+    padding: 10px;
+}
+.row .skSection * {
+    /* background-color: antiquewhite; */
+    word-break: break-all;
+}
+
+.row .skSection .skTitle {
+    background-color: rgba(178, 178, 178);
+    height: 20px;
+    margin-bottom: 5px;
+}
+.row .skSection .skImg {
+    background-color: rgba(178, 178, 178);
+    height: 70px;
+    margin-bottom: 5px;
+}
+.row .skSection .skDescription {
+    background-color: rgba(178, 178, 178);
+    height: 80px;
+}

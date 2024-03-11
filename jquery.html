@@ -37,19 +37,29 @@
             //     $(".div1").toggleClass("colorRed");
             // });
 
-            $.ajax({
-                url: "https://catfact.ninja/fact",
-                complete: function(data) {
-                    // console.log(data);
-                    if(data) {
-                        let res = JSON.parse(data.responseText);
-                        console.log(res.fact);
-                    }
-                },
-                error: function(err) {
-                    console.log("Error: " + err.message);
-                }
-            })
+            // $.ajax({
+            //     url: "https://catfact.ninja/fact",
+            //     complete: function(data) {
+            //         // console.log(data);
+            //         if(data) {
+            //             let res = JSON.parse(data.responseText);
+            //             console.log(res.fact);
+            //         }
+            //     },
+            //     error: function(err) {
+            //         console.log("Error: " + err.message);
+            //     }
+            // })
+
+            $.when(
+                $.ajax("http://universities.hipolabs.com/search?country=India"),
+                $.ajax("https://catfact.ninja/fact")
+            ).then(function( data1, data2, jqXHR ) {
+                // alert( jqXHR.status ); // Alerts 200
+                console.log(data1);
+                console.log(data2);
+                // console.log(jqXHR);
+            });
         });
     </script>
     
