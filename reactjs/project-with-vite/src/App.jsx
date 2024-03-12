@@ -20,6 +20,9 @@ import HeaderComp from './components/HeaderComp';
 import FooterComp from './components/FooterComp';
 import LayoutPage from './pages/LayoutPage';
 import CEOPage from './pages/About/CEOPage';
+import Protected from './components/Protected/ProtectedComp';
+import ProtectedCompRouter from './components/Protected/ProtectedCompRouter';
+import LoginPage from './pages/LoginPage';
 // const Card = lazy(() => {
 //   return new Promise(resolve).then(() => import('./components/Card'));
 // });
@@ -214,58 +217,58 @@ import CEOPage from './pages/About/CEOPage';
 //   )
 // }
 
-let LoginContext = createContext(null);
+// let LoginContext = createContext(null);
 
-function App() {
-  const [flag, setFlag] = useState(1);
-  const [logged, setLogged] = useState(false);
+// function App() {
+//   const [flag, setFlag] = useState(1);
+//   const [logged, setLogged] = useState(false);
 
-  // console.log(location);
-  return (
-    <>
-      <div>
-        {/* <button onClick={() => setFlag(1)}>Home</button>
-        <button onClick={() => setFlag(2)}>About</button>
-        <button onClick={() => setFlag(3)}>Contact</button>
-        <button onClick={() => setFlag(4)}>Blog</button> */}
+//   // console.log(location);
+//   return (
+//     <>
+//       <div>
+//         {/* <button onClick={() => setFlag(1)}>Home</button>
+//         <button onClick={() => setFlag(2)}>About</button>
+//         <button onClick={() => setFlag(3)}>Contact</button>
+//         <button onClick={() => setFlag(4)}>Blog</button> */}
 
-        {/* <a href="/">Home</a> |
-        <a href="/about">About</a> | 
-        <a href="/contact">Contact</a> |
-        <a href="/blog">Blog</a> */}
-      </div>
-      {/* {location.pathname==="/" && <HomePage />}
-      {location.pathname==="/about" && <AboutPage />}
-      {location.pathname==="/contact" && <ContactPage />}
-      {location.pathname==="/blog" && <BlogPage />} */}
+//         {/* <a href="/">Home</a> |
+//         <a href="/about">About</a> | 
+//         <a href="/contact">Contact</a> |
+//         <a href="/blog">Blog</a> */}
+//       </div>
+//       {/* {location.pathname==="/" && <HomePage />}
+//       {location.pathname==="/about" && <AboutPage />}
+//       {location.pathname==="/contact" && <ContactPage />}
+//       {location.pathname==="/blog" && <BlogPage />} */}
 
-      {/* <HeaderComp /> */}
+//       {/* <HeaderComp /> */}
 
-      <BrowserRouter>
-      {
-        logged
-          ?
-          <p><button onClick={() => setLogged(false)}>Logout</button></p>
-          :
-          <p><button onClick={() => setLogged(true)}>Login</button></p>
-      }
-      <LoginContext.Provider value={logged}>
-        <Routes>
-          <Route path='/' element={<LayoutPage />}>
-            <Route index element={<HomePage />} />
-            <Route path='/about' element={<AboutPage age={20} subjects={"html"} />} />
-            <Route path='/about/ceo' element={<CEOPage />} />
-            <Route path='/contact' element={<ContactPage />} />
-            <Route path='/blog' element={<BlogPage />} />
-          </Route>
-        </Routes>
-        </LoginContext.Provider>
-      </BrowserRouter>
+//       <BrowserRouter>
+//       {
+//         logged
+//           ?
+//           <p><button onClick={() => setLogged(false)}>Logout</button></p>
+//           :
+//           <p><button onClick={() => setLogged(true)}>Login</button></p>
+//       }
+//       <LoginContext.Provider value={logged}>
+//         <Routes>
+//           <Route path='/' element={<LayoutPage />}>
+//             <Route index element={<HomePage />} />
+//             <Route path='/about' element={<AboutPage age={20} subjects={"html"} />} />
+//             <Route path='/about/ceo' element={<CEOPage />} />
+//             <Route path='/contact' element={<ContactPage />} />
+//             <Route path='/blog' element={<BlogPage />} />
+//           </Route>
+//         </Routes>
+//         </LoginContext.Provider>
+//       </BrowserRouter>
 
-      {/* <FooterComp /> */}
-    </>
-  )
-}
+//       {/* <FooterComp /> */}
+//     </>
+//   )
+// }
 
 
 // function App1() {
@@ -333,7 +336,49 @@ function App() {
 //   )
 // }
 
+function App1() {
+  const [logged, setLogged] = useState(false);
+  return (
+    <>
+      {
+        logged
+          ?
+          <button onClick={() => setLogged(false)}>Logout</button>
+          :
+          <button onClick={() => setLogged(true)}>Login</button>
+      }
+      <BrowserRouter>
+        <Routes>
+          <Protected logged={logged}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+          </Protected>
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  )
+}
 
+function App() {
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<ProtectedCompRouter />}>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/blog" element={<BlogPage />} />
+          </Route>
+          <Route path="/login" element={<LoginPage />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  )
+}
 
 export default App
-export {LoginContext};
+// export {LoginContext};
