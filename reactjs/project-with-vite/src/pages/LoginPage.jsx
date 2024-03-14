@@ -11,7 +11,6 @@ export default function LoginPage() {
 
     return (
         <>
-
             <button onClick={handleLogin}>Login</button>
         </>
     )

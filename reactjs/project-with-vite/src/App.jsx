@@ -23,6 +23,7 @@ import CEOPage from './pages/About/CEOPage';
 import Protected from './components/Protected/ProtectedComp';
 import ProtectedCompRouter from './components/Protected/ProtectedCompRouter';
 import LoginPage from './pages/LoginPage';
+import ClsCycleComp from './components/ClsCycleComp';
 // const Card = lazy(() => {
 //   return new Promise(resolve).then(() => import('./components/Card'));
 // });
@@ -336,46 +337,55 @@ import LoginPage from './pages/LoginPage';
 //   )
 // }
 
-function App1() {
-  const [logged, setLogged] = useState(false);
-  return (
-    <>
-      {
-        logged
-          ?
-          <button onClick={() => setLogged(false)}>Logout</button>
-          :
-          <button onClick={() => setLogged(true)}>Login</button>
-      }
-      <BrowserRouter>
-        <Routes>
-          <Protected logged={logged}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-          </Protected>
-          <Route path="/login" element={<Login />} />
-        </Routes>
-      </BrowserRouter>
-    </>
-  )
-}
+// function App1() {
+//   const [logged, setLogged] = useState(false);
+//   return (
+//     <>
+//       {
+//         logged
+//           ?
+//           <button onClick={() => setLogged(false)}>Logout</button>
+//           :
+//           <button onClick={() => setLogged(true)}>Login</button>
+//       }
+//       <BrowserRouter>
+//         <Routes>
+//           <Protected logged={logged}>
+//             <Route path="/" element={<HomePage />} />
+//             <Route path="/about" element={<AboutPage />} />
+//             <Route path="/contact" element={<ContactPage />} />
+//             <Route path="/blog" element={<BlogPage />} />
+//           </Protected>
+//           <Route path="/login" element={<Login />} />
+//         </Routes>
+//       </BrowserRouter>
+//     </>
+//   )
+// }
+
+// function App() {
+//   return (
+//     <>
+//       <BrowserRouter>
+//         <Routes>
+//           <Route element={<ProtectedCompRouter />}>
+//             <Route path="/" element={<HomePage />} />
+//             <Route path="/about" element={<AboutPage />} />
+//             <Route path="/about/:id" element={<CEOPage />} />
+//             <Route path="/contact" element={<ContactPage />} />
+//             <Route path="/blog" element={<BlogPage />} />
+//           </Route>
+//           <Route path="/login" element={<LoginPage />} />
+//         </Routes>
+//       </BrowserRouter>
+//     </>
+//   )
+// }
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route element={<ProtectedCompRouter />}>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-          </Route>
-          <Route path="/login" element={<LoginPage />} />
-        </Routes>
-      </BrowserRouter>
+      <ClsCycleComp name="New Name" />
     </>
   )
 }
