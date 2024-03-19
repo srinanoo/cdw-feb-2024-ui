@@ -8,3 +8,43 @@
   level: 'warn',
   timestamp: 'Mar-19-2024 17:23:50'
 }
+{
+  level: 'error',
+  message: '500 - undefined - crudsdffsdf is not defined - /api/v1/trainees/readTrainees - GET - ::1',
+  timestamp: 'Mar-19-2024 18:19:07'
+}
+{
+  level: 'error',
+  message: '500 - undefined - crudsdffsdf is not defined - /api/v1/trainees/readTrainees - GET - ::1',
+  timestamp: 'Mar-19-2024 18:20:36'
+}
+{
+  level: 'error',
+  message: '500 - undefined - crudsdffsdf is not defined - /api/v1/trainees/readTrainees - GET - ::1',
+  timestamp: 'Mar-19-2024 18:22:13'
+}
+{
+  level: 'error',
+  message: '500 - undefined - crudsdffsdf is not defined - /api/v1/trainees/readTrainees - GET - ::1',
+  timestamp: 'Mar-19-2024 18:24:38'
+}
+{
+  level: 'error',
+  message: '500 - undefined - crudsdffsdf is not defined - /api/v1/trainees/readTrainees - GET - ::1',
+  timestamp: 'Mar-19-2024 18:25:07'
+}
+{
+  level: 'error',
+  message: '500 - undefined - crudsdffsdf is not defined - /api/v1/trainees/readTrainees - GET - ::1',
+  timestamp: 'Mar-19-2024 18:27:12'
+}
+{
+  level: 'error',
+  message: '500 - undefined - crudsdffsdf is not defined - /api/v1/trainees/readTrainees - GET - ::1',
+  timestamp: 'Mar-19-2024 18:29:27'
+}
+{
+  level: 'error',
+  message: '500 - undefined - crudsdffsdf is not defined - /api/v1/trainees/readTrainees - GET - ::1',
+  timestamp: 'Mar-19-2024 18:29:54'
+}

@@ -14,7 +14,7 @@ import TraineesEdit from './components/ListComp/Trainees/EditComp'
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename='/cdw-feb-2024-react'>
         <Routes>
           <Route path="/" element={<LayoutPage />}>
             <Route index element={<HomePage />} />

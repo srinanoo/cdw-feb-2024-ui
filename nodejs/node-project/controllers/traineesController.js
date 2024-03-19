@@ -31,7 +31,7 @@ const readTrainees = (req, res) => {
     // }
 
     try {
-        crudsdffsdf.read("trainees", {})
+        crud.read("trainees", {})
             .then(results => {
                 console.log(results);
                 if(results.length > 0) {
@@ -41,9 +41,9 @@ const readTrainees = (req, res) => {
                 }
             });
     } catch(err) {
-        // logger.errorLogger.log("error", `${err.status || 500} - ${res.statusMessage} - ${err.message} - ${req.originalUrl} - ${req.method} - ${req.ip}`)
+        logger.errorLogger.log("error", `${err.status || 500} - ${res.statusMessage} - ${err.message} - ${req.originalUrl} - ${req.method} - ${req.ip}`)
 
-        logger.infoLogger.log(`${req.originalUrl} - ${req.ip}`)
+        // logger.infoLogger.log(`${req.originalUrl} - ${req.ip}`)
 
         // logger.warnLogger.log("warn", `${err.status || 500} - ${res.statusMessage} - ${err.message} - ${req.originalUrl} - ${req.method} - ${req.ip}`)
 

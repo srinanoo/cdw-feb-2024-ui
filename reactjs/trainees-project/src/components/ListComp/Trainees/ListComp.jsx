@@ -10,8 +10,10 @@ export default function TraineesListComponent() {
 
     const fetchData = () => {
         AxiosAPI.get("/trainees/readTrainees")
-            .then(data => {
-                setTrainees(data?.data?.data);
+            .then(results => {
+                console.log(results);
+                if(results.data.data.length > 0)
+                    setTrainees(results?.data?.data);
             });
     }
 
@@ -51,7 +53,7 @@ export default function TraineesListComponent() {
                     <div>Actions</div>
                 </div>
             {
-                Trainees.map((trainee, index) => {
+                Trainees?.map((trainee, index) => {
                     return (
                         <div key={index} className="rowTrainee">
                             <div>{trainee._id}</div>
