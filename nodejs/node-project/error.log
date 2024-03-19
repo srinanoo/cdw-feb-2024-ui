@@ -1,6 +1,10 @@
-error: Mar-18-2024 21:32:28: error
 {
-  message: "500 - undefined - ENOENT: no such file or directory, open 'traineesFile' - /api/v1/trainees/readTrainees - GET - ::1",
+  message: '500 - undefined - crudsdffsdf is not defined - /api/v1/trainees/readTrainees - GET - ::1',
   level: 'error',
-  timestamp: 'Mar-18-2024 21:38:32'
+  timestamp: 'Mar-19-2024 17:19:47'
+}
+{
+  message: '500 - undefined - crudsdffsdf is not defined - /api/v1/trainees/readTrainees - GET - ::1',
+  level: 'warn',
+  timestamp: 'Mar-19-2024 17:23:50'
 }

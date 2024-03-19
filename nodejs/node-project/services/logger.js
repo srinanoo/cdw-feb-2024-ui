@@ -13,6 +13,19 @@ const errorLogger = winston.createLogger({
     ]
 });
 
+const warnLogger = winston.createLogger({
+    transports: [
+        new winston.transports.File({
+            filename: 'error.log',
+            level: 'warn',
+            format: winston.format.combine(
+                winston.format.timestamp({format: 'MMM-DD-YYYY HH:mm:ss'}),
+                winston.format.printf(error => `${error.level}: ${[error.timestamp]}: ${error.message}`),
+                winston.format.prettyPrint(),
+        )}),
+    ]
+});
+
 const infoLogger = winston.createLogger({
     transports: [
         new winston.transports.File({
@@ -25,4 +38,4 @@ const infoLogger = winston.createLogger({
     ]
 })
 
-module.exports = { infoLogger, errorLogger };
+module.exports = { infoLogger, errorLogger, warnLogger };
