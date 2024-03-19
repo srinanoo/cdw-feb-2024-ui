@@ -1,0 +1,22 @@
+.flexTrainee .rowTrainee {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexTrainee .rowTrainee > div {
+    padding: 5px;
+    flex-grow: 1;
+    width: 16.6666666%;
+    border: 1px solid;
+    word-break: break-all;
+}
+
+.rowTrainee.header {
+    background-color: gainsboro;
+    text-align: center;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+}

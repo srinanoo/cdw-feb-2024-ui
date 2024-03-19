@@ -8,6 +8,8 @@ import BatchPage from './pages/BatchesPage'
 import ClassesPage from './pages/ClassesPage'
 import TopicsPage from './pages/TopicsPage'
 import LoginPage from './pages/LoginPage'
+import TraineesAdd from './components/ListComp/Trainees/AddComp'
+import TraineesEdit from './components/ListComp/Trainees/EditComp'
 
 function App() {
   return (
@@ -19,8 +21,8 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
 
             <Route path="/trainees" element={<TraineesPage />} />
-            <Route path="/trainees/add" element="" />
-            <Route path="/trainees/edit" element="" />
+            <Route path="/trainees/add" element={<TraineesAdd />} />
+            <Route path="/trainees/edit/:id" element={<TraineesEdit />} />
 
             <Route path="/trainers" element={<TrainersPage />} />
             <Route path="/trainers/add" element="" />

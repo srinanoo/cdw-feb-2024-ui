@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 require('dotenv').config();
+const cors = require('cors');
 
 const port = process.env.PORT || 4000;
 
@@ -9,6 +10,9 @@ let traineesFile = "./trainees.json";
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+app.use(cors({
+    origin: ["http://127.0.0.1:5173", "http://localhost:5173"]
+}));
 
 // http://localhost:4000/api/v1/trainees
 const TraineesRoutes = require('./routes/traineesRoutes');

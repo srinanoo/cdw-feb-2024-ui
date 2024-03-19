@@ -7,18 +7,34 @@ let batchesFile = "./batches.json";
 const read = (col, param1) => {
     return new Promise(async (resolve, reject) => {
         let results = [];
+        console.log({col});
+        
+        let model;
+        
+        switch (col) {
+            case "trainees":
+                model = require('../models/traineesModel');
+                break;
+            default:
+                model = "";
+        }
+        model?.find(param1).sort({"_id":-1})
+            .then((results) => {
+                console.log(results);
+                resolve(results);
+            });
 
-        fs.readFile("./"+col+".json", "utf8", (err, data) => {
-            if(err) reject(err);
-            else {
-                console.log(param1);
-                if(JSON.stringify(param1).length>2) {
-                    let qry = param1;
-                    data = JSON.parse(data).filter(temp => temp.name === qry.name);
-                }
-                resolve(data);
-            }
-        })
+        // fs.readFile("./"+col+".json", "utf8", (err, data) => {
+        //     if(err) reject(err);
+        //     else {
+        //         console.log(param1);
+        //         if(JSON.stringify(param1).length>2) {
+        //             let qry = param1;
+        //             data = JSON.parse(data).filter(temp => temp.name === qry.name);
+        //         }
+        //         resolve(data);
+        //     }
+        // })
         // // switch(col) {
         // //     case "trainees":
         // //         results = await JSON.parse(fs.readFile(traineesFile, "utf8"));

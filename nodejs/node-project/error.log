@@ -1,0 +1,6 @@
+error: Mar-18-2024 21:32:28: error
+{
+  message: "500 - undefined - ENOENT: no such file or directory, open 'traineesFile' - /api/v1/trainees/readTrainees - GET - ::1",
+  level: 'error',
+  timestamp: 'Mar-18-2024 21:38:32'
+}
